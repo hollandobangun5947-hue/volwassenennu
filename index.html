@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VolwassenenNu: praktische tips over geld, werk, wonen en het volwassen leven.">
+  <title>VolwassenenNu.nl | Het volwassen leven simpel uitgelegd</title>
+  <style>
+    :root {
+      --green: #075244;
+      --light: #eaf2ed;
+      --ink: #14252d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fafbf9;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 2px 10px #00000009;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: var(--green);
+      text-decoration: none;
+    }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: var(--ink); text-decoration: none; }
+    nav a:hover { color: var(--green); text-decoration: underline; }
+    .hero {
+      background: linear-gradient(125deg,#e6f1ea,#ffffff);
+      padding: 85px 7%;
+    }
+    .hero h1 {
+      font-size: clamp(32px,5vw,56px);
+      line-height: 1.15;
+      max-width: 750px;
+      margin: 0;
+    }
+    .hero p { max-width: 580px; font-size: 19px; }
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 13px 23px;
+      border-radius: 9px;
+      text-decoration: none;
+      border: 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .container { max-width: 1150px; margin: auto; padding: 55px 22px; }
+    h2 { font-size: 30px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 18px #0000000b;
+    }
+    .card h3 { margin: 8px 0; }
+    .card a { color: var(--green); font-weight: bold; }
+    .emoji { font-size: 34px; }
+    .calculator {
+      background: var(--light);
+      padding: 28px;
+      border-radius: 16px;
+      max-width: 650px;
+    }
+    label { display: block; margin-top: 14px; font-weight: bold; }
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #bbc9c1;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+    .result {
+      font-size: 23px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: var(--green);
+    }
+    footer {
+      background: #103e35;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    @media(max-width:650px) {
+      header { align-items: flex-start; }
+      nav { gap: 12px; font-size: 14px; }
+      .hero { padding: 65px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">VolwassenenNu.nl</a>
+  <nav>
+    <a href="#geld">Geld</a>
+    <a href="#werk">Werk</a>
+    <a href="#wonen">Wonen</a>
+    <a href="#leven">Leven</a>
+    <a href="#tools">Tools</a>
+    <a href="#community">Community</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Volwassen worden? Je hoeft het niet alleen uit te zoeken.</h1>
+  <p>Praktische tips, handige tools en binnenkort een community.
+  Alles over geld, werk, wonen en het volwassen leven op één plek.</p>
+  <a class="btn" href="#onderwerpen">Ontdek de gidsen →</a>
+</section>
+
+<main>
+  <section class="container" id="onderwerpen">
+    <h2>Wat wil je ontdekken?</h2>
+    <div class="grid">
+      <article class="card" id="geld">
+        <div class="emoji">💰</div>
+        <h3>Geld</h3>
+        <p>Sparen, budgetteren en slimmer omgaan met je geld.</p>
+        <a href="#tools">Bekijk de budgettool →</a>
+      </article>
+      <article class="card" id="werk">
+        <div class="emoji">💼</div>
+        <h3>Werk</h3>
+        <p>Solliciteren, arbeidsrechten, salaris en carrière.</p>
+        <span>Binnenkort artikelen</span>
+      </article>
+      <article class="card" id="wonen">
+        <div class="emoji">🏠</div>
+        <h3>Wonen</h3>
+        <p>Huren, verhuizen en je eerste eigen woning.</p>
+        <span>Binnenkort artikelen</span>
+      </article>
+      <article class="card" id="leven">
+        <div class="emoji">❤️</div>
+        <h3>Leven</h3>
+        <p>Gezondheid, relaties en persoonlijke ontwikkeling.</p>
+        <span>Binnenkort artikelen</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" id="tools">
+    <h2>Gratis budgetcalculator</h2>
+    <p>Ontdek hoeveel geld je maandelijks overhoudt.</p>
+    <div class="calculator">
+      <label for="inkomen">Netto maandinkomen (€)</label>
+      <input id="inkomen" type="number" min="0" value="2000">
+
+      <label for="huur">Huur en woonlasten (€)</label>
+      <input id="huur" type="number" min="0" value="700">
+
+      <label for="vast">Overige vaste lasten (€)</label>
+      <input id="vast" type="number" min="0" value="350">
+
+      <label for="variabel">Boodschappen en andere uitgaven (€)</label>
+      <input id="variabel" type="number" min="0" value="450">
+
+      <p class="result" id="resultaat" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="container" id="artikelen">
+    <h2>Artikelen die eraan komen</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Hoeveel spaargeld moet je hebben als je 25 bent?</h3>
+        <p>Een praktische gids over sparen en financiële doelen.</p>
+      </article>
+      <article class="card">
+        <h3>Wat moet je weten over je eerste baan?</h3>
+        <p>Van arbeidsovereenkomst tot vakantiedagen.</p>
+      </article>
+      <article class="card">
+        <h3>Wat moet je regelen als je uit huis gaat?</h3>
+        <p>Een handige checklist voor je eerste woning.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" id="community">
+    <h2>De VolwassenenNu Community</h2>
+    <p>Een plek om vragen te stellen en ervaringen te delen.
+    We werken aan deze functie. Binnenkort meer!</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 VolwassenenNu.nl</p>
+  <p>Het volwassen leven, simpel uitgelegd.</p>
+</footer>
+
+<script>
+  const velden = ["inkomen","huur","vast","variabel"];
+  const euro = new Intl.NumberFormat("nl-NL", {
+    style: "currency",
+    currency: "EUR"
+  });
+
+  function bereken() {
+    const waarden = velden.map(id => {
+      const waarde = Number(document.getElementById(id).value);
+      return Number.isFinite(waarde) ? Math.max(0, waarde) : 0;
+    });
+
+    const over = waarden[0] - waarden[1] - waarden[2] - waarden[3];
+    const resultaat = document.getElementById("resultaat");
+    resultaat.textContent = over >= 0
+      ? "Je houdt " + euro.format(over) + " per maand over."
+      : "Je komt " + euro.format(-over) + " per maand tekort.";
+  }
+
+  velden.forEach(id => {
+    document.getElementById(id).addEventListener("input", bereken);
+  });
+  bereken();
+</script>
+
+</body>
+</html>
